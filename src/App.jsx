@@ -4,9 +4,9 @@ import axios from 'axios'
 function App() {
 
   const [formData, setFormData] = useState({
-    author: "",
-    title: "",
-    body: "",
+    author: "prova",
+    title: "prova",
+    body: "prova",
     public: true
   })
 
@@ -19,9 +19,16 @@ function App() {
     }))
   }
 
+  function postAxios(obj) {
+    axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', obj)
+      .then(response => console.log(response.data))
+      .catch(error => console.log(error))
+  }
+
   function sendData(event) {
     event.preventDefault()
     console.log(formData)
+    postAxios(formData)
   }
 
   return (
@@ -68,6 +75,7 @@ function App() {
 
         <button type="submit">invio form</button>
       </form>
+
     </>
 
 
