@@ -26,7 +26,10 @@ function App() {
   return (
     <>
       <form action="" onSubmit={sendData}>
+
+        <label htmlFor="nome-autore">nome autore: </label>
         <input
+          id="nome-autore"
           type="text"
           name="author"
           value={formData.author}
@@ -34,23 +37,27 @@ function App() {
           placeholder="inserisci il nome dell'autore" />
         <br />
 
+        <label htmlFor="titolo-post">titolo: </label>
         <input
+          id='titolo-post'
           type="text"
           name="title"
           value={formData.title}
           onChange={handleFormData}
-          placeholder="inserisci il nome dell'autore" />
+          placeholder="inserisci il titolo" />
         <br />
 
+        <label htmlFor="corpo-post">testo: </label>
         <input
+          id='corpo-post'
           type="text"
           name="body"
           value={formData.body}
           onChange={handleFormData}
-          placeholder="inserisci il nome dell'autore" />
+          placeholder="inserisci il testo" />
         <br />
 
-        <label htmlFor="public">disponibile</label>
+        <label htmlFor="public">post pubblico</label>
         <input
           type="checkbox"
           name="public"
