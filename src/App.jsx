@@ -7,7 +7,7 @@ function App() {
     author: "prova",
     title: "prova",
     body: "prova",
-    public: true
+    public: false
   })
 
   function handleFormData(event) {
@@ -20,7 +20,7 @@ function App() {
   }
 
   function postAxios(obj) {
-    axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/postsss', obj)
+    axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', obj)
       .then(response =>
         console.log(response.data)
       )
