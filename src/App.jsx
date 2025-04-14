@@ -20,9 +20,13 @@ function App() {
   }
 
   function postAxios(obj) {
-    axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', obj)
-      .then(response => console.log(response.data))
-      .catch(error => console.log(error))
+    axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/postsss', obj)
+      .then(response =>
+        console.log(response.data)
+      )
+      .catch(error =>
+        console.log(error)
+      )
   }
 
   function sendData(event) {
@@ -65,8 +69,9 @@ function App() {
           placeholder="inserisci il testo" />
         <br />
 
-        <label htmlFor="public">post pubblico</label>
+        <label htmlFor="public-post">post pubblico</label>
         <input
+          id='public-post'
           type="checkbox"
           name="public"
           checked={formData.available}
