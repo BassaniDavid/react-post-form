@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 function App() {
-
+  // setto l oggetto di base e l useState per modificarlo all inserimento da parte dell utente
   const [formData, setFormData] = useState({
     author: "prova",
     title: "prova",
@@ -10,7 +10,9 @@ function App() {
     public: false
   })
 
+  // funzione per aggiungere all oggetto anche ciò che inserisce l utente andando in tal modo a sovrascrivere i dati precedente, se modificati
   function handleFormData(event) {
+    // linea specifica per il checkbox
     let value = event.target.type === "checkbox" ? event.target.checked : event.target.value
 
     setFormData((formData) => ({
@@ -19,6 +21,7 @@ function App() {
     }))
   }
 
+  // funzione per inviare dati ad un API con axios e stampare la risposta in console
   function postAxios(obj) {
     axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', obj)
       .then(response =>
@@ -29,9 +32,13 @@ function App() {
       )
   }
 
+  // funzione per l invio del form
   function sendData(event) {
+    // previene il ricaricamento
     event.preventDefault()
+    // stampa in console i dati
     console.log(formData)
+    // li invia ad axios per la chiamata all API
     postAxios(formData)
   }
 
