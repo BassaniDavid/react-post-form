@@ -1,8 +1,8 @@
-# progetto: post forum  
-creare un form multifield per inviare dati in POST ad un’API.  
+# Post forum  
+### Obiettivo: creare un form multifield per inviare dati in POST ad un’API.  
 ---
 
-creare una nuova app React che contenga un form per creare un nuovo post all’interno di un blog.  
+Creare una nuova app React che contenga un form per creare un nuovo post all’interno di un blog.  
 
 I dati che il form dovrà inviare sono i seguenti:
 - author (string) - L’autore del post
@@ -12,7 +12,7 @@ I dati che il form dovrà inviare sono i seguenti:
 
 L’endpoint a cui effettuare la chiamata POST è il seguente:  
 
-https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts  
+https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts
 
 Questo endpoint, in caso di successo, restituisce i dati inviati.  
 Stamparli in console per verificare di essere riusciti ad inviare correttamente tutto.  
